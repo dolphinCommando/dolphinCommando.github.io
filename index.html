@@ -1,35 +1,77 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <head>
-        <meta charset="UTF-8">
-        <title>Portfolio-About</title>
-        <link rel="stylesheet" href="assets/css/reset.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
-    <body>
-        <header>
-            <h1>Matthew Buchanan</h1>
-            <nav>
-                <a href="index.html">About</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </header>
-        <section>
-            <h2>About Me</h2>
-            <p>
-                    Integer mi lacus, laoreet sit amet tincidunt eget, posuere eget libero. Aenean quis ultricies nibh, sed tincidunt dui. Phasellus bibendum elit vitae risus sagittis hendrerit. Sed vestibulum ex vel turpis tempor finibus. Aliquam erat volutpat. In volutpat nulla leo, eu interdum eros dapibus et. Fusce libero leo, laoreet ac consectetur et, hendrerit a tellus. Vivamus dictum, sem eget rhoncus hendrerit, libero diam fermentum odio, sit amet dignissim nisi metus at felis. Vivamus semper malesuada felis. Curabitur elementum leo at tellus faucibus vestibulum. In tincidunt faucibus ante, eu fringilla ex rhoncus non. Vestibulum egestas vulputate nisi, nec accumsan sapien congue sed. Praesent scelerisque at nisl et sodales.
-            </p>
-            <img src="http://via.placeholder.com/200x200" alt="Placeholder image">
-        </section>
-        <aside>
-            <h3>Connect with Me</h3>
-            <nav>
-                <a href="https://github.com/dolphinCommando"><img src="assets/images/github.png" alt="GitHub logo"></a>
-                <a href="https://www.linkedin.com/in/matthew-buchanan-b272a2156/"><img src="assets/images/linkedin.png" alt="LinkedIn Page"></a>
-                <a href="https://stackoverflow.com/users/9194055/matt-buchanan"><img src="assets/images/stackoverflow.png" alt="StackOverflow account"></a>
-            </nav>
-        </aside>
-        <footer>Matthew Buchanan 2018</footer>
-    </body>
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="content-type" content="text/html"/>
+  <meta name="author" content="Matthew Buchanan"/>
+  <title>Matthew Buchanan</title>
+  <meta name="description" content="Learn more abut Matthew Buchanan, software developer"/>
+  <meta name="keywords" content="Web developer, full stack, software"/>
+  <meta name="distribution" content="web"/>
+  <meta name="format-detection" content="telephone=yes"/>
+  <meta name="HandheldFriendly" content="true"/> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" type="text/css" href="./css/reset.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+  <div class="container" id="top">
+  <header>
+    <h1>Matthew Buchanan</h1>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="https://github.com/dolphinCommando" target="_blank">Github</a>
+    <a href="https://www.linkedin.com/in/matthew-buchanan-b272a2156/" target="_blank">LinkedIn</a>
+  </nav>
+  <main class="main-grid">
+    <article id="about" class="content">
+      <p class="p-about">
+        Hi, my name is Matt.
+        I am a web developer.
+      </p>
+    </article>
+    <article id="projects" class="content">
+      <section class="intro">
+        <h1 class="project-h1">My Projects</h1>
+        <a class="return" href="#top">❖</a>
+      </section>
+      <div class="portfolio">
+      <section class="project-gif">
+        <a href="https://peaceful-chamber-12798.herokuapp.com/" target="_blank"><img src="./img/NYTReact.gif" alt="giphy gif"/></a>
+      </section>
+      <section class="project-gif">
+        <a href="https://dolphincommando.github.io/giphy-hw/" target="_blank"><img src="./img/GifTasticSpeed.gif" alt="giphy gif"/></a>
+      </section>
+      <section class="project-gif">
+        <a href="https://protected-cliffs-74770.herokuapp.com/" target="_blank"><img src="./img/EatDaBurger.gif" alt="giphy gif"/></a>
+      </section>
+      <section class="project-gif">
+        <a href="https://dolphincommando.github.io/week-4-game/" target="_blank"><img src="./img/StarWarsRPG.gif" alt="giphy gif"/></a>
+      </section>
+      </div>
+    </article>
+    <aside id="contact" class="content">
+      <section class="intro">
+        <h1 class="contact-h1">Email Me</h1>
+        <a class="return" href="#top">❖</a>
+      </section>
+      <form>
+        <label for="eaddress">Your Email</label>
+        <input type="email" id="eaddress"/>
+        <label for="esubject">Subject</label>
+        <input type="text" id="esubject" />
+        <label for="emessage">Message</label>
+        <textarea id="emessage" style="height:150px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </aside>
+  </main>
+  <footer>
+    <span>Last updated August 2018</span>
+  </footer>
+  </div>
+</body>
 </html>

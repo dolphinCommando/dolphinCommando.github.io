@@ -1,0 +1,151 @@
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: #444444;
+}
+
+header h1 {
+  font-size: 1.75em;
+}
+
+nav a {
+  font-size: 1.15em;
+  color: #666666;
+  font-style: normal;
+  cursor: pointer;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0000ff;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 18% auto 18%;
+  grid-template-rows: 10vh 10vh auto;
+}
+
+.main-grid, header, nav, footer {
+  grid-column: 2 / span 1;
+}
+
+header {
+  grid-row: 1 / span 1;
+  place-self: center;
+}
+
+
+nav {
+  grid-row: 2  / span 1;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  padding: 5px 15px;
+}
+
+.intro {
+  font-size: 1.15em;
+  margin: 25px 0px;
+}
+
+.return {
+  text-decoration: none;
+  color: #000000;
+}
+
+img {
+  max-width: 100%;
+}
+
+nav, .intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  padding: 10px 10px 30px 30px;
+}
+
+#about {
+  margin-top: 35px;
+  border: none;
+}
+
+form {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 5px 0px 5px 5px;
+  margin: 10px 0px;
+}
+
+input[type="submit"] {
+  width: 100px;
+  padding: 15px 5px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 60px;
+  padding: 20px;
+  font-size: 0.75em;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.portfolio section {
+  width: 50%;
+}
+
+
+
+@media screen and (max-width: 1050px) {
+  .container {
+    display: grid;
+    grid-template-columns: 14% auto 14%;
+    grid-template-rows: 20vh 10vh auto;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    grid-template-rows: 20vh 10vh auto;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    display: grid;
+    grid-template-columns: 5% auto 5%;
+    grid-template-rows: 15vh 25vh auto;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+
+
+
+
