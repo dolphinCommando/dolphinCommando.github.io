@@ -4,7 +4,7 @@ body {
   font-style: normal;
   font-variant: normal;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 25px;
   color: #444444;
 }
 
@@ -12,12 +12,10 @@ header h1 {
   font-size: 1.75em;
 }
 
-nav a {
-  font-size: 1.15em;
-  color: #666666;
-  font-style: normal;
-  cursor: pointer;
+.header-div {
+  margin-top: 25px;
 }
+
 
 a:link {
   text-decoration: none;
@@ -30,25 +28,21 @@ a:hover {
 .container {
   display: grid;
   grid-template-columns: 18% auto 18%;
-  grid-template-rows: 10vh 10vh auto;
+  grid-template-rows: 10vh auto;
 }
 
-.main-grid, header, nav, footer {
+.main-grid, header, footer {
   grid-column: 2 / span 1;
 }
 
 header {
   grid-row: 1 / span 1;
-  place-self: center;
 }
 
-
-nav {
-  grid-row: 2  / span 1;
-  border-top: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
-  padding: 5px 15px;
+main {
+  grid-row: 2 / auto;
 }
+
 
 .intro {
   font-size: 1.15em;
@@ -62,9 +56,10 @@ nav {
 
 img {
   max-width: 100%;
+  max-height: 100%;
 }
 
-nav, .intro {
+header, .intro {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -82,13 +77,23 @@ nav, .intro {
 
 form {
   margin-left: 30px;
+  margin-right: 30px;
   display: flex;
   flex-direction: column;
+  font-size: 0.75em;
 }
 
 input {
   padding: 5px 0px 5px 5px;
   margin: 10px 0px;
+}
+
+.bold {
+  font-size: 1.10em;
+}
+
+textarea, input {
+  width: 75%;
 }
 
 input[type="submit"] {
@@ -113,35 +118,45 @@ footer {
   width: 50%;
 }
 
+.header-link {
+  padding: 0px 15px;
+}
+
+.p-about {
+  margin: 15px;
+}
 
 
 @media screen and (max-width: 1050px) {
   .container {
     display: grid;
-    grid-template-columns: 14% auto 14%;
-    grid-template-rows: 20vh 10vh auto;
-  }
-}
-
-@media screen and (max-width: 850px) {
-  .container {
-    display: grid;
     grid-template-columns: 10% auto 10%;
-    grid-template-rows: 20vh 10vh auto;
+    grid-template-rows: 15vh auto;
   }
 }
 
-@media screen and (max-width: 750px) {
+
+@media screen and (max-width: 425px) {
   .container {
     display: grid;
     grid-template-columns: 5% auto 5%;
-    grid-template-rows: 15vh 25vh auto;
+    grid-template-rows: 20vh auto;
   }
-  nav {
+
+  .portfolio section {
+    width: 100%;
+  }
+
+  header {
     display: flex;
     flex-direction: column;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
+    flex-direction: column-reverse;
+  }
+
+  footer {
+    margin-top: 0px;
   }
 }
 
