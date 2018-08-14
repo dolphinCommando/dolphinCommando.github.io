@@ -25,6 +25,7 @@ a:hover {
   display: grid;
   grid-template-columns: 15% auto 15%;
   grid-template-rows: 15vh auto;
+
 }
 
 .main-grid, header, footer {
@@ -39,6 +40,15 @@ header {
 
 main {
   grid-row: 2 / auto;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: auto auto auto;
+  grid-row-gap: 2vw;
+}
+
+.content {
+  grid-column-start: auto;
+  grid-row-start: auto;
 }
 
 .intro {
@@ -56,9 +66,7 @@ img {
   max-height: 100%;
 }
 
-.content {
-  padding: 10px;
-}
+
 
 #about {
   border: none;
@@ -99,15 +107,17 @@ footer {
 .portfolio-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 50%);
-  grid-template-rows: repeat(3, 300px);
+  grid-template-rows: repeat(3, 25vw);
+  grid-column-gap: 2vh;
+  grid-row-gap: 5vw;
 }
 
 .project-wrapper {
   grid-column-start: auto;
   grid-row-start: auto;
-  padding: 0px 10px 10px 25px;
+
   display: grid;
-  grid-template-rows: 25% 75%;
+  grid-template-rows: 20% 80%;
   grid-template-columns: 100%;
 }
 
@@ -122,7 +132,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   border-top: 1px solid #eeeeee;
 }
 .project-info span {
@@ -159,8 +169,24 @@ footer {
   }
 }
 
+@media screen and (max-width: 900px) {
+  .portfolio-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, 35vw);
+    grid-column-gap: 5px;
+    grid-row-gap: 3vw;
+  }
+  .project-wrapper {
+    grid-template-rows: 30% 70%;
+  }
+  main {
+    grid-row-gap: 5vw;
+  }
+}
 
-@media screen and (max-width: 425px) {
+
+@media screen and (max-width: 600px) {
   .container {
     display: grid;
     grid-template-columns: 5% auto 5%;
@@ -186,7 +212,7 @@ footer {
   header {
     justify-content: center;
   }
-  
+
   header h1 {
     font-size: 1.7em;
   }
